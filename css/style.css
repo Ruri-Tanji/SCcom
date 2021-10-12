@@ -1,0 +1,910 @@
+@charset "UTF-8";
+
+/* モバイル */
+@media (max-width: 600px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* HEADER */
+    .main-nav {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+    .main-nav li {
+        margin: 0 20px;
+    }
+
+    /* TOP */
+    .top-content {
+        margin-top: 20%;
+    }
+}
+
+/* 共通部分 */
+html {
+    font-size: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+    line-height: 1.7;
+    color: rgb(0, 0, 0);
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+/* フッター */
+.footer-top {
+    background: #b89369;
+    text-align: center;
+    padding: 0px 0px;
+    height: 75px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.footerFixed{
+    min-height: 100vh; /* ←コンテンツの高さの最小値＝ブラウザの高さに指定 */
+    position: relative;/* ←相対位置 */
+    padding-bottom: 60px; /* ←フッターの高さを指定 */
+    box-sizing: border-box;
+}
+
+.footer-under {
+    background: #b89369;
+    text-align: center;
+    padding: 15px 0;
+    position: absolute;/* ←絶対位置 */
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-under p {
+    color: #fff;
+    font-size: 0.875rem;
+}
+
+.pagetop {
+    z-index: 2;
+    display: none;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.pagetop a {
+    display: block;
+    font-size: 0;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    background: rgb(206, 206, 206);
+    border-radius: 50%;
+    line-height: 60px;
+}
+
+.pagetop a i {
+    font-size: 25px;
+    color: #fff;
+    line-height: 60px;
+}
+
+.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* HEADER
+------------------------------- */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -15px;
+}
+
+.title {
+    margin-left: -3px;
+    color: white;
+    font-size: 33px;
+    font-weight: bold;
+}
+
+.main-nav {
+    display: flex;
+    text-transform: uppercase;
+    list-style: none;
+    margin-right: -30px;
+}
+
+.main-nav img {
+    max-width: 50%;
+}
+
+.Help {
+    margin: 0px 0px 0px 0px;
+    position: relative;
+}
+
+.Help:hover .balloon1 {
+    display: inline;
+}
+
+.balloon1 {
+    position: absolute;
+    display: none;
+    padding: 2px;
+    background-color: #ffffff;
+    /* 背景色（透明度） */
+    width: 100px;
+    /* 吹き出し全体の幅 */
+    left: 0%;
+    /* 表示位置 */
+    top: 100%;
+    /* 表示位置 */
+    margin-top: -1px;
+    /* 表示位置 */
+    font-size: 90%;
+    color: black;
+    font-weight: bold;
+}
+
+.balloon1:after {
+    border-bottom: 10px solid #ffffff;
+    /* 吹き出し口の高さ・色 */
+    border-left: 10px solid transparent;
+    /* 吹き出し口の幅１／２ */
+    border-right: 10px solid transparent;
+    /* 吹き出し口の幅１／２ */
+    top: -10px;
+    /* 吹き出し口の位置調整 */
+    left: 40%;
+    /* 吹き出し口の横位置 */
+    content: "";
+    position: absolute;
+}
+
+.Mypage {
+    margin: -4px 0px 0px -40px;
+    position: relative;
+}
+
+.Mypage:hover .balloon2 {
+    display: inline;
+}
+
+.balloon2 {
+    position: absolute;
+    display: none;
+    padding: 2px;
+    background-color: #ffffff;
+    /* 背景色（透明度） */
+    width: 100px;
+    /* 吹き出し全体の幅 */
+    left: 8%;
+    /* 表示位置 */
+    top: 100%;
+    /* 表示位置 */
+    margin-top: -1px;
+    /* 表示位置 */
+    font-size: 90%;
+    color: black;
+    font-weight: bold;
+}
+
+.balloon2:after {
+    border-bottom: 10px solid #ffffff;
+    /* 吹き出し口の高さ・色 */
+    border-left: 10px solid transparent;
+    /* 吹き出し口の幅１／２ */
+    border-right: 10px solid transparent;
+    /* 吹き出し口の幅１／２ */
+    top: -10px;
+    /* 吹き出し口の位置調整 */
+    left: 40%;
+    /* 吹き出し口の横位置 */
+    content: "";
+    position: absolute;
+}
+
+.back {
+    background-size: cover;
+    max-width: 100%;
+}
+
+.top-text {
+    line-height: 1.1;
+    display: inline-block;
+    transform: rotate(-8deg);
+    position: absolute;
+    top: 17vw;
+    left: 6vw;
+    color: rgb(255, 255, 255);
+    text-align: right;
+    font-size: 5vw;
+    font-weight: bold;
+    font-family: Helvetica;
+    text-shadow:
+        0 1px 0 #ccc,
+        0 2px 0 #c9c9c9,
+        0 3px 0 #bbb,
+        0 4px 0 #b9b9b9,
+        0 5px 0 #aaa,
+        0 6px 1px rgba(0, 0, 0, .1),
+        0 0 5px rgba(0, 0, 0, .1),
+        0 1px 3px rgba(0, 0, 0, .3),
+        0 3px 5px rgba(0, 0, 0, .2),
+        0 5px 10px rgba(0, 0, 0, .25),
+        0 10px 10px rgba(0, 0, 0, .2),
+        0 20px 20px rgba(0, 0, 0, .15);
+}
+
+.seats_2 {
+    width: 25vw;
+    transition-duration: 0.3s;
+    position: absolute;
+    top: 16vw;
+    left: 48vw;
+}
+
+.seats_2:hover {
+    transform: scale(1.2);
+    transition-duration: 0.3s;
+}
+
+.seats_4 {
+    width: 33vw;
+    position: absolute;
+    top: 26vw;
+    left: 10vw;
+    transition-duration: 0.3s;
+}
+
+.seats_4:hover {
+    transform: scale(1.14);
+    transition-duration: 0.3s;
+}
+
+.seats_6 {
+    width: 45vw;
+    position: absolute;
+    top: 32vw;
+    left: 50vw;
+    transition-duration: 0.3s;
+}
+
+.seats_6:hover {
+    transform: scale(1.12);
+    transition-duration: 0.3s;
+}
+
+.seats_8 {
+    width: 55vw;
+    position: absolute;
+    top: 48vw;
+    left: 5vw;
+    transition-duration: 0.3s;
+}
+
+.seats_8:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.ex {
+    position: relative;
+    padding: 1rem 2rem;
+    text-align: center;
+    border: 4px solid rgb(206, 206, 206);
+}
+
+.ex:before {
+    font-size: 15px;
+    font-size: 1.5rem;
+    position: absolute;
+    top: -40px;
+    left: -6px;
+    height: 38px;
+    padding: 0 1em;
+    color: #fff;
+    background: rgb(206, 206, 206);
+}
+
+.se2 {
+    display: block;
+    padding-top: 60px;
+    margin-top: -60px;
+}
+
+.se {
+    display: block;
+    padding-top: 110px;
+    margin-top: -110px;
+}
+
+#ex2 {
+    margin-top: 50px;
+}
+
+#ex2:before {
+    content: '新しい出会いがあるかも?';
+}
+
+#ex4:before {
+    content: '友達増やしたいな...';
+}
+
+#ex6:before {
+    content: 'グループワークにおすすめ!';
+}
+
+#ex8:before {
+    content: '大人数で盛り上がろう♪';
+}
+
+.grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    margin-top: 5%;
+    margin-bottom: 100px;
+}
+
+.item img {
+    max-width: 100%;
+}
+
+.No_1 {
+    transition-duration: 0.3s;
+}
+
+.No_1:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.No_2 {
+    transition-duration: 0.3s;
+}
+
+.No_2:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.No_3 {
+    transition-duration: 0.3s;
+}
+
+.No_3:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.No_4 {
+    transition-duration: 0.3s;
+}
+
+.No_4:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.No_5 {
+    transition-duration: 0.3s;
+}
+
+.No_5:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.No_6 {
+    transition-duration: 0.3s;
+}
+
+.No_6:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.No_7 {
+    transition-duration: 0.3s;
+}
+
+.No_7:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.No_8 {
+    transition-duration: 0.3s;
+}
+
+.No_8:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.No_9 {
+    transition-duration: 0.3s;
+}
+
+.No_9:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.No_10 {
+    transition-duration: 0.3s;
+}
+
+.No_10:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.No_11 {
+    transition-duration: 0.3s;
+}
+
+.No_11:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.No_12 {
+    transition-duration: 0.3s;
+}
+
+.No_12:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.No_13 {
+    transition-duration: 0.3s;
+}
+
+.No_13:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.No_14 {
+    transition-duration: 0.3s;
+}
+
+.No_14:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.No_15 {
+    transition-duration: 0.3s;
+}
+
+.No_15:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.No_16 {
+    transition-duration: 0.3s;
+}
+
+.No_16:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.No_17 {
+    transition-duration: 0.3s;
+}
+
+.No_17:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.No_18 {
+    transition-duration: 0.3s;
+}
+
+.No_18:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.No_19 {
+    transition-duration: 0.3s;
+}
+
+.No_19:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.No_20 {
+    transition-duration: 0.3s;
+}
+
+.No_20:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.No_21 {
+    transition-duration: 0.3s;
+}
+
+.No_21:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.No_22 {
+    transition-duration: 0.3s;
+}
+
+.No_22:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.No_23 {
+    transition-duration: 0.3s;
+}
+
+.No_23:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.No_24 {
+    transition-duration: 0.3s;
+}
+
+.No_24:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.No_25 {
+    transition-duration: 0.3s;
+}
+
+.No_25:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+.No_26 {
+    transition-duration: 0.3s;
+}
+
+.No_26:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+/* help */
+.back_page {
+    margin-left: -3px;
+    color: white;
+    font-size: 33px;
+    font-weight: bold;
+}
+
+.ti {
+    color: white;
+    margin-right: 43.5%;
+    font-size: 33px;
+    font-weight: bold;
+}
+
+.qu {
+    position: relative;
+    top: 100px;
+    left: 5%;
+    width: 90%;
+    padding: 0.5rem 2rem;
+    border-top: 1px solid rgb(167, 167, 167);
+    border-bottom: 1px solid rgb(167, 167, 167);
+    background: #f4f4f4;
+}
+
+.fi {
+    margin-top: 110px;
+    margin-left: 5%;
+    font-size: 15px;
+    padding: 0.5rem 2rem;
+    width: 90%;
+    border-bottom: 3px dashed rgb(167, 167, 167);
+}
+
+#many_q p {
+    margin-left: 5%;
+    font-size: 15px;
+    padding: 0.5rem 2rem;
+    width: 90%;
+    border-bottom: 3px dashed rgb(167, 167, 167);
+}
+
+/* Mypage */
+.icon {
+    width: 100px;
+    margin-top: 150px;
+}
+
+#pro {
+    text-align: center;
+    margin-right: 150px;
+}
+
+.name {
+    text-align: center;
+    margin-top: -98px;
+    margin-left: 30px;
+    font-size: 30px;
+}
+
+.mail {
+    text-align: center;
+    margin-top: -10px;
+    margin-left: 190px;
+    font-size: 20px;
+}
+
+.topic {
+    position: relative;
+    top: 50px;
+    left: 5%;
+    width: 90%;
+    padding: 0.5rem 2rem;
+    border-top: 1px solid rgb(167, 167, 167);
+    border-bottom: 1px solid rgb(167, 167, 167);
+    background: #f4f4f4;
+}
+
+.info {
+    margin-top: 60px;
+    margin-left: 5%;
+    font-size: 15px;
+    padding: 0.5rem 2rem;
+    width: 90%;
+    border-bottom: 3px dashed rgb(167, 167, 167);
+}
+
+#topic p {
+    margin-left: 5%;
+    font-size: 15px;
+    padding: 0.5rem 2rem;
+    width: 90%;
+    border-bottom: 3px dashed rgb(167, 167, 167);
+}
+
+.fin {
+    margin-left: 5%;
+    margin-bottom: 60px;
+    font-size: 15px;
+    padding: 0.5rem 2rem;
+    width: 90%;
+    border-bottom: 3px dashed rgb(167, 167, 167);
+}
+
+/* chat */
+.tit {
+    color: white;
+    margin-right: -15%;
+    font-size: 33px;
+    font-weight: bold;
+}
+
+#your_container {
+    
+    height: 100%;
+    width: 100%;
+}
+
+/* チャットの外側部分① */
+#bms_messages_container {
+    height: 100%;
+    width: 100%;
+    background-color: #eee;
+}
+
+/* タイムライン部分③ */
+#bms_messages {
+    overflow: auto;
+    height: 93%;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    background-color: #eee;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.2) inset;
+}
+
+/* メッセージ全般のスタイル */
+.bms_message {
+    position: relative;
+    top: 60px;
+    margin: 0px;
+    padding: 0 14px;
+    font-size: 16px;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+/* メッセージ１（左側） */
+.bms_left {
+    float: left;
+    line-height: 1.3em;
+}
+
+/* メッセージ２（右側） */
+.bms_right {
+    float: right;
+    line-height: 1.3em;
+}
+
+/* 回り込みを解除 */
+.bms_clear {
+    clear: both;
+}
+
+/* テキストエリア、送信ボタン④ */
+#bms_send {
+    position: fixed;
+    bottom: 8px;
+    width: 100%;
+    background-color: #eee;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    height: 48px;
+    padding: 4px;
+}
+
+#bms_send_message {
+    width: calc(100% - 75px);
+    line-height: 16px;
+    height: 48px;
+    padding: 14px 6px 0px 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: left;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.2) inset;
+    box-sizing: border-box;
+}
+
+#bms_send_btn {
+    width: 72px;
+    height: 48px;
+    font-size: 16px;
+    line-height: 3em;
+    float: right;
+    color: #fff;
+    font-weight: bold;
+    background: #bcbcbc;
+    text-align: center;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#bms_send_btn:hover {
+    background: #b89369;
+    cursor: pointer;
+}
+
+.bms_message_box {
+    margin-top: 20px;
+    max-width: 100%;
+    font-size: 16px;
+}
+
+.bms_message_content {
+    padding: 20px;
+}
+
+/* メッセージ１（左側） */
+.bms_left {
+    float: left;
+    line-height: 1.3em;
+    flex-direction: row;
+}
+
+.bms_left .bms_message_box {
+    color: #333;
+    /*テキストを黒にする*/
+    background: #fff;
+    border: 2px solid #b89369;
+    border-radius: 30px 30px 30px 0px;
+    margin-right: 50px;
+}
+
+/* メッセージ２（右側） */
+.bms_right {
+    float: right;
+    line-height: 1.3em;
+}
+
+.bms_right .bms_message_box {
+    color: #fff;
+    background: #b89369;
+    border: 2px solid #b89369;
+    border-radius: 30px 30px 0px 30px;
+    margin-left: 50px;
+}
+
+.im{
+    margin-top: 50px;
+    width: 75px;
+    height: 75px;
+}
+
+.icon-name {
+    width: 60px;
+    font-size: 12px;
+    text-align: center;
+    margin-left: 8px;
+    margin-top: -10px;
+}
+
+.im1{
+    margin-top: 20px;
+    width: 75px;
+    height: 75px;
+}
+
+#left{
+    margin-left: 85px;
+    margin-top: -85px;
+}
+#left1{
+    margin-left: 85px;
+    margin-top: -85px;
+}
+#left2{
+    margin-left: 85px;
+    margin-top: -85px;
+}
+#left3{
+    margin-left: 85px;
+    margin-top: -85px;
+}
+#left4{
+    margin-left: 85px;
+    margin-top: -85px;
+}
+#left5{
+    margin-left: 85px;
+    margin-top: -85px;
+}
+#left6{
+    margin-left: 85px;
+    margin-top: -85px;
+}
+#left7{
+    margin-left: 85px;
+    margin-top: -85px;
+}

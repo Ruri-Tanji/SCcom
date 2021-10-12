@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>SCcom</title>
+    <meta name="description" content="学食のようなコミュニケーションサイト">
+    <link rel="icon" type="image/png" href="images/logo.PNG">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- JS -->
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://cdn.mlkcca.com/v0.6.0/milkcocoa.js"></script>
+    <script src="js/chat.js"></script>
+</head>
+
+<body>
+    <p class="pagetop" style="display: block;">
+        <a href="#">
+        <i class="fas fa-chevron-up"></i>
+        </a>
+    </p>
+    <div id="top">
+        <footer class="footer-top">
+            <dev class="wrapper">
+                <header class="page-header wrapper">
+                    <a class="back_page" href="index.html">＜</a>
+                    <a class="tit">テーブル 17</a>
+                    <nav>
+                        <ul class="main-nav">
+                            <a class="Help" href="help.html"><img src="images/Help.png" alt="Help">
+                                <span class="balloon1">Help</span>
+                            </a>
+                            <a class="Mypage" href="mypage.html"><img src="images/Mypage.png" alt="Mypage">
+                                <span class="balloon2">Mypage</span>
+                            </a>
+                        </ul>
+                    </nav>
+                </header>
+            </dev>
+        </footer>
+    </div><!-- /.top -->
+    <div id="your_container">
+        <div id="bms_messages_container">
+            <div id="bms_messages">
+                <!-- you -->
+                <div class="bms_message bms_left">
+                    <figure class="icon-img"><img class="im" src="images/Mypage.png" alt="mypage">
+                        <figcaption class="icon-name">イニアド1</figcaption>
+                    </figure>
+                    <div class="bms_message_box" id="left">
+                        <div class="bms_message_content">
+                            <div class="bms_message_text">こんにちはー</div>
+                        </div>
+                    </div>
+                    <figure class="icon-img"><img class="im1" src="images/Mypage.png" alt="mypage">
+                        <figcaption class="icon-name">イニアド2</figcaption>
+                    </figure>
+                    <div class="bms_message_box" id="left1">
+                        <div class="bms_message_content">
+                            <div class="bms_message_text">こんにちは</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bms_clear"></div>
+
+                <!-- me -->
+                <div class="bms_message bms_right" id="jsi-board">
+                    <div class="bms_message_box">
+                        <div class="bms_message_content">
+                            <div class="bms_message_text">こんにちは！</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bms_clear"></div>
+
+                <div class="bms_message bms_left">
+                    <figure class="icon-img"><img class="im1" src="images/Mypage.png" alt="mypage">
+                        <figcaption class="icon-name">イニアド3</figcaption>
+                    </figure>
+                    <div class="bms_message_box" id="left3">
+                        <div class="bms_message_content">
+                            <div class="bms_message_text">こんにちは!!</div>
+                        </div>
+                    </div>
+                    <figure class="icon-img"><img class="im1" src="images/Mypage.png" alt="mypage">
+                        <figcaption class="icon-name">イニアド4</figcaption>
+                    </figure>
+                    <div class="bms_message_box" id="left4">
+                        <div class="bms_message_content">
+                            <div class="bms_message_text">こんにちは!!</div>
+                        </div>
+                    </div>
+                    <figure class="icon-img"><img class="im1" src="images/Mypage.png" alt="mypage">
+                        <figcaption class="icon-name">イニアド5</figcaption>
+                    </figure>
+                    <div class="bms_message_box" id="left5">
+                        <div class="bms_message_content">
+                            <div class="bms_message_text">こんにちは!!</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bms_clear"></div>
+            </div>
+
+            <div id="bms_send">
+                <textarea id="bms_send_message" oninput="checkEmail()"></textarea>
+                <button type="submit" id="bms_send_btn" disabled>送信</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
